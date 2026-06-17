@@ -1,12 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: cpp-web-service
+  name: task-manager-service
+
 spec:
   selector:
-    app: cpp-web
+    app: task-manager
+
   ports:
   - port: 80
     targetPort: 8080
     nodePort: 30080
+
   type: NodePort
